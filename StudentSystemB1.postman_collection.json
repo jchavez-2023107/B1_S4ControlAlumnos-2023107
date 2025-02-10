@@ -1,0 +1,1172 @@
+{
+	"info": {
+		"_postman_id": "fe980700-cb34-431a-b75a-f2590de4ce34",
+		"name": "StudentSystemB1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956992"
+	},
+	"item": [
+		{
+			"name": "Profesores",
+			"item": [
+				{
+					"name": "AUTORIZACIÓN PARA CURSOS",
+					"item": [
+						{
+							"name": "Crear Curso",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjliODYyZDBhMTQyMWYwZWQxZTIiLCJ1c2VybmFtZSI6ImpjaGF2ZXoiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiaWF0IjoxNzM5MTQyMTY4LCJleHAiOjE3MzkxNTI5Njh9.lNkXhV-BHGj54EnYqBKhxG7AlQjDdiqmHHJrI3SbIGE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Matemáticas Avanzadas 2",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Curso para profundizar en álgebra y cálculo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2636/api/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar Curso",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjliODYyZDBhMTQyMWYwZWQxZTIiLCJ1c2VybmFtZSI6ImpjaGF2ZXoiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiaWF0IjoxNzM5MTQyMTY4LCJleHAiOjE3MzkxNTI5Njh9.lNkXhV-BHGj54EnYqBKhxG7AlQjDdiqmHHJrI3SbIGE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Matemáticas Avanzadas - Actualizado",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Curso actualizado con nuevos temas",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2636/api/courses/67a934d662d0a1421f0ed214",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses",
+										"67a934d662d0a1421f0ed214"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Curso",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjliODYyZDBhMTQyMWYwZWQxZTIiLCJ1c2VybmFtZSI6ImpjaGF2ZXoiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiaWF0IjoxNzM5MTQyMTY4LCJleHAiOjE3MzkxNTI5Njh9.lNkXhV-BHGj54EnYqBKhxG7AlQjDdiqmHHJrI3SbIGE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/courses/67a934d662d0a1421f0ed214",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses",
+										"67a934d662d0a1421f0ed214"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar Cursos del Profesor",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjliODYyZDBhMTQyMWYwZWQxZTIiLCJ1c2VybmFtZSI6ImpjaGF2ZXoiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiaWF0IjoxNzM5MTQyMTY4LCJleHAiOjE3MzkxNTI5Njh9.lNkXhV-BHGj54EnYqBKhxG7AlQjDdiqmHHJrI3SbIGE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/courses/my-courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses",
+										"my-courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta de Cursos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjliODYyZDBhMTQyMWYwZWQxZTIiLCJ1c2VybmFtZSI6ImpjaGF2ZXoiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiaWF0IjoxNzM5MTQyMTY4LCJleHAiOjE3MzkxNTI5Njh9.lNkXhV-BHGj54EnYqBKhxG7AlQjDdiqmHHJrI3SbIGE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta de Curso por ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E4ZmQzYTU1Y2NhMWQ2YTA0YWYxZjIiLCJ1c2VybmFtZSI6ImpwZXJleiIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MzkxMjgxNTEsImV4cCI6MTczOTEzODk1MX0.JaNgBde1vHf5raCFzZvoNLhOiuwxKy0mubzyFQ56h9o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/courses/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AUTORIZACIÓN PARA PERFIL",
+					"item": [
+						{
+							"name": "Actualizar Profesor",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E4ZmQzYTU1Y2NhMWQ2YTA0YWYxZjIiLCJ1c2VybmFtZSI6ImpwZXJleiIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MzkxMjgxNTEsImV4cCI6MTczOTEzODk1MX0.JaNgBde1vHf5raCFzZvoNLhOiuwxKy0mubzyFQ56h9o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Juan Actualizado",
+											"type": "text"
+										},
+										{
+											"key": "surname",
+											"value": "Pérez",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "55986858",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2636/api/teachers/updateProfile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"teachers",
+										"updateProfile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Profesor",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E4ZmQzYTU1Y2NhMWQ2YTA0YWYxZjIiLCJ1c2VybmFtZSI6ImpwZXJleiIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MzkxMjgxNTEsImV4cCI6MTczOTEzODk1MX0.JaNgBde1vHf5raCFzZvoNLhOiuwxKy0mubzyFQ56h9o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/teachers/deleteProfile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"teachers",
+										"deleteProfile"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Agregar Profesor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Joel",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Chávez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jchavez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jchavez@kinal.org.gt",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Aa!",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "55915715",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "TEACHER_ROLE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/api/auth/register/teacher",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"auth",
+								"register",
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estudiantes",
+			"item": [
+				{
+					"name": "AUTORIZACIÓN",
+					"item": [
+						{
+							"name": "Ver Cursos Asignados",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjlmZjYyZDBhMTQyMWYwZWQxZWMiLCJ1c2VybmFtZSI6ImFjaGF2ZXoiLCJyb2xlIjoiU1RVREVOVF9ST0xFIiwiaWF0IjoxNzM5MTQzNzgwLCJleHAiOjE3MzkxNTQ1ODB9.80Cn5Be8as-aBgf40IT4eZ_zK7UwFa5wSmT5cv4Hq7c",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/students/myCourses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"students",
+										"myCourses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar Perfil Estudiante",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjlmZjYyZDBhMTQyMWYwZWQxZWMiLCJ1c2VybmFtZSI6ImFjaGF2ZXoiLCJyb2xlIjoiU1RVREVOVF9ST0xFIiwiaWF0IjoxNzM5MTQzNzgwLCJleHAiOjE3MzkxNTQ1ODB9.80Cn5Be8as-aBgf40IT4eZ_zK7UwFa5wSmT5cv4Hq7c",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Alejandro Actualizado",
+											"type": "text"
+										},
+										{
+											"key": "surname",
+											"value": "Nuevo Chávez",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "78331166",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2636/api/students/updateProfile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"students",
+										"updateProfile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Estudiante",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjlmZjYyZDBhMTQyMWYwZWQxZWMiLCJ1c2VybmFtZSI6ImFjaGF2ZXoiLCJyb2xlIjoiU1RVREVOVF9ST0xFIiwiaWF0IjoxNzM5MTQzNzgwLCJleHAiOjE3MzkxNTQ1ODB9.80Cn5Be8as-aBgf40IT4eZ_zK7UwFa5wSmT5cv4Hq7c",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/students/deleteProfile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"students",
+										"deleteProfile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Asignar Curso",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjlmZjYyZDBhMTQyMWYwZWQxZWMiLCJ1c2VybmFtZSI6ImFjaGF2ZXoiLCJyb2xlIjoiU1RVREVOVF9ST0xFIiwiaWF0IjoxNzM5MTQzNzgwLCJleHAiOjE3MzkxNTQ1ODB9.80Cn5Be8as-aBgf40IT4eZ_zK7UwFa5wSmT5cv4Hq7c",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "courseId",
+											"value": "67a92c2162d0a1421f0ed207",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2636/api/students/assignCourse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"students",
+										"assignCourse"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Agregar Estudiante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Alejandro",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Chávez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "achavez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "achavez@kinal.edu.gt",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Aa!",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "47683777",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/api/auth/register/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"auth",
+								"register",
+								"student"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Loggin Profesor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userlogin",
+									"value": "jchavez@kinal.org.gt",
+									"description": "Puede ser correo o username.",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Aa!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Loggin Estudiante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userlogin",
+									"value": "achavez@kinal.edu.gt",
+									"description": "Puede ser email o username",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Aa!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userlogin",
+									"value": "adminuser@kinal.org.gt",
+									"description": "Puede ser correo o nombre de usuario.",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Aa!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "AUTORIZACIÓN ESTUDIANTE",
+					"item": [
+						{
+							"name": "Asignar Curso a Estudiante",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjlmZjYyZDBhMTQyMWYwZWQxZWMiLCJ1c2VybmFtZSI6ImFjaGF2ZXoiLCJyb2xlIjoiU1RVREVOVF9ST0xFIiwiaWF0IjoxNzM5MTQzNzgwLCJleHAiOjE3MzkxNTQ1ODB9.80Cn5Be8as-aBgf40IT4eZ_zK7UwFa5wSmT5cv4Hq7c",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "courseId",
+											"value": "67a92c2e62d0a1421f0ed20a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2636/api/students/assignCourse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"students",
+										"assignCourse"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ver Cursos Asignados a Estudiante",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjlmZjYyZDBhMTQyMWYwZWQxZWMiLCJ1c2VybmFtZSI6ImFjaGF2ZXoiLCJyb2xlIjoiU1RVREVOVF9ST0xFIiwiaWF0IjoxNzM5MTQzNzgwLCJleHAiOjE3MzkxNTQ1ODB9.80Cn5Be8as-aBgf40IT4eZ_zK7UwFa5wSmT5cv4Hq7c",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/students/myCourses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"students",
+										"myCourses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AUTORIZACIÓN PROFESOR",
+					"item": [
+						{
+							"name": "Crear Curso",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjliODYyZDBhMTQyMWYwZWQxZTIiLCJ1c2VybmFtZSI6ImpjaGF2ZXoiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiaWF0IjoxNzM5MTQyMTY4LCJleHAiOjE3MzkxNTI5Njh9.lNkXhV-BHGj54EnYqBKhxG7AlQjDdiqmHHJrI3SbIGE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Matemáticas Avanzadas",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Curso para profundizar en álgebra y cálculo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2636/api/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar Curso",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjliODYyZDBhMTQyMWYwZWQxZTIiLCJ1c2VybmFtZSI6ImpjaGF2ZXoiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiaWF0IjoxNzM5MTQyMTY4LCJleHAiOjE3MzkxNTI5Njh9.lNkXhV-BHGj54EnYqBKhxG7AlQjDdiqmHHJrI3SbIGE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Matemáticas Avanzadas - Actualizado",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Curso actualizado con nuevos temas",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2636/api/courses/67a934d662d0a1421f0ed214",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses",
+										"67a934d662d0a1421f0ed214"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Curso",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjliODYyZDBhMTQyMWYwZWQxZTIiLCJ1c2VybmFtZSI6ImpjaGF2ZXoiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiaWF0IjoxNzM5MTQyMTY4LCJleHAiOjE3MzkxNTI5Njh9.lNkXhV-BHGj54EnYqBKhxG7AlQjDdiqmHHJrI3SbIGE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/courses/67a92be862d0a1421f0ed204",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses",
+										"67a92be862d0a1421f0ed204"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar Cursos del Profesor",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MjliODYyZDBhMTQyMWYwZWQxZTIiLCJ1c2VybmFtZSI6ImpjaGF2ZXoiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiaWF0IjoxNzM5MTQyMTY4LCJleHAiOjE3MzkxNTI5Njh9.lNkXhV-BHGj54EnYqBKhxG7AlQjDdiqmHHJrI3SbIGE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/courses/my-courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses",
+										"my-courses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AUTORIZACIÓN ADMIN",
+					"item": [
+						{
+							"name": "Obtener Cursos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MmE2ZTYyZDBhMTQyMWYwZWQxZjgiLCJ1c2VybmFtZSI6ImFkbWludXNlciIsInJvbGUiOiJBRE1JTl9ST0xFIiwiaWF0IjoxNzM5MTQzMzE2LCJleHAiOjE3MzkxNTQxMTZ9.JnZdUVAF079TO20cfONiQ8IK9fQsmhrnMzWaFe8yJp4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Curso por ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MmE2ZTYyZDBhMTQyMWYwZWQxZjgiLCJ1c2VybmFtZSI6ImFkbWludXNlciIsInJvbGUiOiJBRE1JTl9ST0xFIiwiaWF0IjoxNzM5MTQzMzE2LCJleHAiOjE3MzkxNTQxMTZ9.JnZdUVAF079TO20cfONiQ8IK9fQsmhrnMzWaFe8yJp4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/courses/67a92be862d0a1421f0ed204",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses",
+										"67a92be862d0a1421f0ed204"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "AUTORIZACIÓN",
+					"item": [
+						{
+							"name": "Obtener Estudiantes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MmE2ZTYyZDBhMTQyMWYwZWQxZjgiLCJ1c2VybmFtZSI6ImFkbWludXNlciIsInJvbGUiOiJBRE1JTl9ST0xFIiwiaWF0IjoxNzM5MTQzMzE2LCJleHAiOjE3MzkxNTQxMTZ9.JnZdUVAF079TO20cfONiQ8IK9fQsmhrnMzWaFe8yJp4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Estudiante By ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MmE2ZTYyZDBhMTQyMWYwZWQxZjgiLCJ1c2VybmFtZSI6ImFkbWludXNlciIsInJvbGUiOiJBRE1JTl9ST0xFIiwiaWF0IjoxNzM5MTQzMzE2LCJleHAiOjE3MzkxNTQxMTZ9.JnZdUVAF079TO20cfONiQ8IK9fQsmhrnMzWaFe8yJp4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/students/67a929ff62d0a1421f0ed1ec",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"students",
+										"67a929ff62d0a1421f0ed1ec"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar Profesores",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MmE2ZTYyZDBhMTQyMWYwZWQxZjgiLCJ1c2VybmFtZSI6ImFkbWludXNlciIsInJvbGUiOiJBRE1JTl9ST0xFIiwiaWF0IjoxNzM5MTQzMzE2LCJleHAiOjE3MzkxNTQxMTZ9.JnZdUVAF079TO20cfONiQ8IK9fQsmhrnMzWaFe8yJp4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/teachers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"teachers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar Profesor por ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MmE2ZTYyZDBhMTQyMWYwZWQxZjgiLCJ1c2VybmFtZSI6ImFkbWludXNlciIsInJvbGUiOiJBRE1JTl9ST0xFIiwiaWF0IjoxNzM5MTQzMzE2LCJleHAiOjE3MzkxNTQxMTZ9.JnZdUVAF079TO20cfONiQ8IK9fQsmhrnMzWaFe8yJp4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/teachers/67a929b862d0a1421f0ed1e2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"teachers",
+										"67a929b862d0a1421f0ed1e2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta de Cursos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MmE2ZTYyZDBhMTQyMWYwZWQxZjgiLCJ1c2VybmFtZSI6ImFkbWludXNlciIsInJvbGUiOiJBRE1JTl9ST0xFIiwiaWF0IjoxNzM5MTQzMzE2LCJleHAiOjE3MzkxNTQxMTZ9.JnZdUVAF079TO20cfONiQ8IK9fQsmhrnMzWaFe8yJp4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta de Curso por ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5MmE2ZTYyZDBhMTQyMWYwZWQxZjgiLCJ1c2VybmFtZSI6ImFkbWludXNlciIsInJvbGUiOiJBRE1JTl9ST0xFIiwiaWF0IjoxNzM5MTQzMzE2LCJleHAiOjE3MzkxNTQxMTZ9.JnZdUVAF079TO20cfONiQ8IK9fQsmhrnMzWaFe8yJp4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2636/api/courses/67a92be862d0a1421f0ed204",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2636",
+									"path": [
+										"api",
+										"courses",
+										"67a92be862d0a1421f0ed204"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CREAR ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Admin",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "User",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "adminuser",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "adminuser@kinal.org.gt",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Aa!",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "78331469",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/api/auth/register/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"api",
+								"auth",
+								"register",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
